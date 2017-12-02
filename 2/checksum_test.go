@@ -20,6 +20,7 @@ func TestChecksumPart2(t *testing.T) {
 		t.Errorf("Result was wrong, got: %d, want: %d.", Result, Want)
 	}
 }
+
 func TestChecksumPart1WithInputFile(t *testing.T) {
 	pwd, _ := os.Getwd()
 	buf, err := ioutil.ReadFile(pwd+"/input")
