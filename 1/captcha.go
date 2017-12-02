@@ -26,6 +26,18 @@ func captcha(b []byte) int{
   return sum
 }
 
+func captcha_part2(b []byte) int{
+  sum := 0
+
+  for i, _ := range b {
+    if b[i] == b[(i + len(b) / 2) % len(b)] {
+      number, _:= strconv.Atoi(string(b[i]))
+      sum += number
+    }
+  }
+  return sum
+}
+
 func main() {
   if len(os.Args) != 2 {
     fmt.Println("Usage: takes a file of integers as only argument.")
@@ -40,5 +52,6 @@ func main() {
   //Trim newline from inputfile
   buf = bytes.Trim(buf, "\x0A")
 
-  fmt.Println(captcha(buf))
+  fmt.Println("Part 1:", captcha(buf))
+  fmt.Println("Part 2:", captcha_part2(buf))
 }
