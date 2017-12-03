@@ -27,7 +27,7 @@ func TestCaptchaPart1(t *testing.T) {
 	if Result != Want {
 		t.Errorf("Result was wrong, got: %d, want: %d.", Result, Want)
 	}
-	
+
 }
 
 func TestCaptchaPart2(t *testing.T) {
@@ -60,7 +60,7 @@ func TestCaptchaPart2(t *testing.T) {
 
 func TestCaptchaPart1WithInputFile(t *testing.T) {
 	pwd, _ := os.Getwd()
-	buf, err := ioutil.ReadFile(pwd+"/input")
+	buf, err := ioutil.ReadFile(pwd + "/input")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -74,7 +74,7 @@ func TestCaptchaPart1WithInputFile(t *testing.T) {
 
 func TestCaptchaPart2WithInputFile(t *testing.T) {
 	pwd, _ := os.Getwd()
-	buf, err := ioutil.ReadFile(pwd+"/input")
+	buf, err := ioutil.ReadFile(pwd + "/input")
 	if err != nil {
 		log.Fatal(err)
 	}
