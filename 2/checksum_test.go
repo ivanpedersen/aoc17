@@ -23,7 +23,7 @@ func TestChecksumPart2(t *testing.T) {
 
 func TestChecksumPart1WithInputFile(t *testing.T) {
 	pwd, _ := os.Getwd()
-	buf, err := ioutil.ReadFile(pwd+"/input")
+	buf, err := ioutil.ReadFile(pwd + "/input")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -36,7 +36,7 @@ func TestChecksumPart1WithInputFile(t *testing.T) {
 
 func TestChecksumPart2WithInputFile(t *testing.T) {
 	pwd, _ := os.Getwd()
-	buf, err := ioutil.ReadFile(pwd+"/input")
+	buf, err := ioutil.ReadFile(pwd + "/input")
 	if err != nil {
 		log.Fatal(err)
 	}
