@@ -1,0 +1,10 @@
+language: go
+
+branches:
+  only:
+    - master
+
+before_script:
+  - go vet ./...
+
+script: go test ./...
